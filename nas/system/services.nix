@@ -7,6 +7,7 @@
   };
 
   services                          = {
+    syncthing.enable		    = true;
     zerotierone.enable              = true;
     mullvad-vpn.enable              = true;
     auto-cpufreq.enable             = true;
@@ -36,6 +37,10 @@
         "zroot/aeternae/data_games"     = {use_template = ["basic"];};
         "zroot/aeternae/data_hentai"    = {use_template = ["basic"];};
         "zroot/aeternae/data_images"    = {use_template = ["basic"];};
+        "zroot/aeternae/data_memes"     = {use_template = ["basic"];};
+        "zroot/aeternae/data_reading"   = {use_template = ["basic"];};
+        "zroot/aeternae/data_torrents"  = {use_template = ["basic"];};
+        "zroot/aeternae/data_vm_images" = {use_template = ["basic"];};
         "zroot/aeternae/data_servers"   = {use_template = ["basic"];};
         "zroot/aeternae/data_videos"    = {use_template = ["basic"];};
         "zroot/aeternae/data_work"      = {use_template = ["basic"];};
@@ -71,9 +76,7 @@
 
     openssh                             = {
       enable                            = true;
-      listenAddresses                   = [
-        {addr = "0.0.0.0"; port = 22;}
-      ];
+      settings.ListenAddress            = "10.147.20.100";
       settings.PermitRootLogin          = "no";
     };
 

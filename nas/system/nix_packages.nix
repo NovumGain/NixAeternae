@@ -1,7 +1,13 @@
 { config, lib, pkgs, ... }:
 
 {
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+      nvidia.acceptLicense = true;
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     file-rename                    moonlight-qt
     wget           openssl         qemu_full  
@@ -16,6 +22,7 @@
     virtiofsd      nvtop-nvidia    opensnitch
     librewolf      git             python3
     curl           docker-compose  nodejs
+    vlc            ffmpeg 	   mkvtoolnix
   ];
   
   nixpkgs.config.permittedInsecurePackages = [

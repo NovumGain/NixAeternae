@@ -6,7 +6,7 @@
 
   outputs = { self, nixpkgs, home-manager }@inputs: {
     nixosConfigurations = {
-      mysystem = nixpkgs.lib.nixosSystem {
+      "host-pc" = nixpkgs.lib.nixosSystem {
         modules = [ ./configuration.nix ];
         system = "x86_64-linux";
         specialArgs = inputs;

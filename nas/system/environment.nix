@@ -9,7 +9,5 @@
   users.users.user                    = {
     isNormalUser                      = true;
     extraGroups                       = [ "wheel" "docker" "input" ]; # Enable ‘sudo’ for the user.
-    packages                          = with pkgs; [
-    ];
   };
 }

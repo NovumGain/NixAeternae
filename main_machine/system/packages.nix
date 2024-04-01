@@ -15,6 +15,7 @@
     pavucontrol         yarn             zerotierone         
     unzip               usbutils         docker
     insomnia            docker-compose   vim
-    sshfs
+    sshfs		typescript
+    syncthing
   ];
 }

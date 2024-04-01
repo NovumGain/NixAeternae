@@ -4,11 +4,11 @@
   services                                  = {
     zerotierone.enable                      = true;
     openssh                                 = {
-      enable                                = true;
       settings.PasswordAuthentication       = false;
       settings.PubkeyAuthentication         = true;
       settings.KbdInteractiveAuthentication = false;
 
+      settings.ListenAddress                = "10.147.20.1";
       settings.PermitRootLogin              = "no";
     };
 
@@ -17,6 +17,7 @@
       displayManager.sddm.enable            = true;
       desktopManager.plasma5.enable         = true;
     };
+
     zfs.trim.enable                         = true;
     zfs.autoScrub.enable                    = true;
 

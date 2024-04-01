@@ -2,6 +2,7 @@
 
 {
   boot                                  = {
+    kernelPackages 			= pkgs.linuxPackages_6_7_hardened;
     kernelModules                       = [ "kvm-amd" ];
     extraModprobeConfig                 = ''
       blacklist nouveau

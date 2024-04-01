@@ -1,11 +1,12 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   boot = {
+    kernelPackages                  = pkgs.linuxPackages_6_7_hardened;
     kernelModules                   = [ "kvm-amd" "uinput" ];
     kernelParams                    = [
-      "zfs.zfs_arc_min              = 536870912"
-      "zfs.zfs_arc_max              = 4294967296"
+      "zfs.zfs_arc_min=536870912"
+      "zfs.zfs_arc_max=4294967296"
     ];
 
     loader                          = {
@@ -24,8 +25,4 @@
   sound.enable                      = true;
   hardware.cpu.amd.updateMicrocode  = lib.mkDefault config.hardware.enableRedistributableFirmware;
   system.stateVersion               = "23.11";
-  users.users.user                  = {
-    isNormalUser                    = true;
-    extraGroups                     = [ "wheel" "docker" "input" ];
-  };
 }

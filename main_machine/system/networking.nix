@@ -12,7 +12,7 @@
       enable              = true;
       allowedTCPPorts     = [ 22  23  24800 ];
       allowedUDPPorts     = [ 47998  48000  24800 ];
-    }
+    };
 
     nat = {
       enable              = true;

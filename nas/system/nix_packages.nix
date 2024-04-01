@@ -23,6 +23,7 @@
     librewolf      git             python3
     curl           docker-compose  nodejs
     vlc            ffmpeg 	   mkvtoolnix
+    xdotool
   ];
   
   nixpkgs.config.permittedInsecurePackages = [

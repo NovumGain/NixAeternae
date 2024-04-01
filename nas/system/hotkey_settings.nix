@@ -1,4 +1,4 @@
-{conf}
+{ config, lib, pkgs, ... }:
 {
   programs.light.enable = true; # Needed for the /run/wrappers/bin/light SUID wrapper.
   services.actkbd = {

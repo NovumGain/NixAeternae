@@ -5,7 +5,7 @@
   services.actkbd = {
     enable = true;
     bindings = [
-      { keys = [ 71 ]; events = [ "key" ]; command = "/run/wrappers/bin/light -A 10"; }
+      { keys = [ 71 ]; events = [ "KeyPress" ]; command = "/run/wrappers/bin/light -A 10"; }
     ];
   };
 
